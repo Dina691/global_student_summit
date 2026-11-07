@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'soal3.dart';
 
 void main() {
   runApp(const GlobalSummitApp());
@@ -50,6 +51,23 @@ class GlobalSummitApp extends StatelessWidget {
                   const SizedBox(height: 10),
 
                   Text('Negara: $negara'),
+                  const SizedBox(height: 20),
+
+                  Builder(
+                    builder: (context) {
+                      return ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Soal3Page(),
+                            ),
+                          );
+                        },
+                        child: const Text('Lihat Daftar Peserta Global'),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
